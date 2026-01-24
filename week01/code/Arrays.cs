@@ -9,11 +9,26 @@ public static class Arrays
     public static double[] MultiplesOf(double number, int length)
     {
         // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        //Plan:
+        //1. Create a new array of 'number' with the size of 'length'.
+        //2. Use a for loop to iterate through the array from index 0 to length - 1.
+        //3. In each iteration, calculate the multiple.
+        //   - The formula is: number * (index + 1)
+        //4. Assign the calculated multiple to the current index of the array.
+        //5. After the loop, return the filled array.
 
-        return []; // replace this return statement with your own
+        //Step 1: Create the array
+        double[] multiples = new double[length];
+
+        //Step 2: Loop through the array
+        for (int i = 0; i < length; i++)
+        {
+            //Step 3&4: Calculate the multiple and assign it to the array
+            multiples[i] = number * (i + 1);
+        }
+        //Step 5: Return the filled array
+        return multiples;
+
     }
 
     /// <summary>
@@ -26,8 +41,13 @@ public static class Arrays
     public static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        //Plan:
+        //1.Determine where to split the list for rotation.
+        //2. Get the last 'amount' elements to move to the front.
+        //3. Get the remaining elements that will follow.
+        //4. Clear the original list.
+        //5. Add the two parts back to the list in the new order.
+        
+
     }
 }
