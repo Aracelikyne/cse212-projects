@@ -47,6 +47,22 @@ public static class Arrays
         //3. Get the remaining elements that will follow.
         //4. Clear the original list.
         //5. Add the two parts back to the list in the new order.
+
+        //Step 1: Determine the split point
+        int splitPoint = data.Count - amount;   
+
+        //Step 2: Get the last 'amount' elements
+        List<int> endPart = data.GetRange(splitPoint, amount);
+
+        //Step 3: Get the remaining elements
+        List<int> startPart = data.GetRange(0, splitPoint);
+
+        //Step 4: Clear the original list
+        data.Clear();
+
+        //Step 5: Add the two parts back to the list in the new order
+        data.AddRange(endPart);
+        data.AddRange(startPart);
         
 
     }
